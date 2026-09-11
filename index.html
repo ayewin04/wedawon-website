@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Wedawon - Language Learning App</title>
-    
+    <title>Wedawon - Mobile App Development</title>
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
-    
+
     <!-- Font Awesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-    
+
     <style>
         /* ============================================
            CSS RESET & BASE
@@ -145,7 +145,6 @@
             width: 100%;
         }
 
-        /* Mobile Menu Toggle */
         .menu-toggle {
             display: none;
             flex-direction: column;
@@ -367,6 +366,82 @@
         }
 
         /* ============================================
+           APPS SECTION
+           ============================================ */
+        .apps-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 24px;
+        }
+
+        .app-card {
+            background: var(--bg-card);
+            padding: 28px;
+            border-radius: var(--radius);
+            border: 1px solid var(--border-color);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .app-card:hover {
+            border-color: var(--gold);
+            transform: translateY(-4px);
+            box-shadow: var(--shadow);
+        }
+
+        .app-card .app-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+            margin-bottom: 16px;
+            background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+            color: white;
+        }
+
+        .app-card h3 {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .app-card .app-tagline {
+            color: var(--gold);
+            font-size: 13px;
+            font-weight: 500;
+            margin-bottom: 12px;
+            font-style: italic;
+        }
+
+        .app-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+            line-height: 1.7;
+            margin-bottom: 16px;
+            flex: 1;
+        }
+
+        .app-card .app-meta {
+            display: flex;
+            gap: 12px;
+            flex-wrap: wrap;
+            margin-top: auto;
+        }
+
+        .app-card .app-meta span {
+            font-size: 11px;
+            padding: 4px 10px;
+            background: rgba(66, 165, 245, 0.15);
+            color: var(--accent);
+            border-radius: 50px;
+            font-weight: 500;
+        }
+
+        /* ============================================
            FEATURES
            ============================================ */
         .features-grid {
@@ -417,7 +492,7 @@
         }
 
         .privacy-content h2 {
-            font-size: 24px;
+            font-size: 22px;
             font-weight: 700;
             margin: 32px 0 12px;
             color: var(--gold);
@@ -698,7 +773,8 @@
             }
 
             .about-grid,
-            .contact-grid {
+            .contact-grid,
+            .apps-grid {
                 grid-template-columns: 1fr;
             }
 
@@ -759,6 +835,7 @@
             </button>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#about" class="active">About</a></li>
+                <li><a href="#apps">Apps</a></li>
                 <li><a href="#privacy">Privacy</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
@@ -771,16 +848,17 @@
     <section class="hero" id="home">
         <div class="container">
             <div class="hero-badge">
-                <i class="fas fa-rocket"></i> Let's learn for our future
+                <i class="fas fa-code"></i> Building Apps for the Future
             </div>
-            <h1>Learn Languages with <span>Wedawon</span></h1>
+            <h1>We build <span>mobile apps</span> that matter</h1>
             <p>
-                Your all-in-one language learning companion. Master vocabulary, 
-                grammar, and exam preparation for IELTS, HSK, JLPT, and TOPIK.
+                Wedawon is a mobile app development company based in Myanmar.
+                We create meaningful applications that solve real problems —
+                from language learning to social connection.
             </p>
             <div class="hero-buttons">
-                <a href="#about" class="btn btn-primary">
-                    <i class="fas fa-info-circle"></i> Learn More
+                <a href="#apps" class="btn btn-primary">
+                    <i class="fas fa-mobile-alt"></i> View Our Apps
                 </a>
                 <a href="#contact" class="btn btn-secondary">
                     <i class="fas fa-envelope"></i> Contact Us
@@ -796,46 +874,101 @@
         <div class="container">
             <h2 class="section-title">About <span>Wedawon</span></h2>
             <p class="section-subtitle">
-                Wedawon is a comprehensive language learning app designed to help you 
-                master languages through structured lessons and exam preparation.
+                A mobile app studio focused on crafting high-quality, user-friendly
+                applications for people around the world.
             </p>
             <div class="about-grid">
                 <div class="about-card">
-                    <span class="icon">📚</span>
+                    <span class="icon">🎯</span>
                     <h3>Our Mission</h3>
                     <p>
-                        To make language learning accessible, engaging, and effective 
-                        for everyone. We provide high-quality content for multiple 
-                        languages and exam levels.
-                    </p>
-                </div>
-                <div class="about-card">
-                    <span class="icon">🌍</span>
-                    <h3>What We Offer</h3>
-                    <p>
-                        Vocabulary building, grammar lessons, exam preparation, 
-                        and interactive practice for IELTS, HSK, JLPT, and TOPIK 
-                        with pronunciation guides.
-                    </p>
-                </div>
-                <div class="about-card">
-                    <span class="icon">🎯</span>
-                    <h3>Our Approach</h3>
-                    <p>
-                        Structured learning paths with clear progression, 
-                        audio pronunciation, and engaging content designed 
-                        for effective language acquisition.
+                        To build apps that solve real-world problems and make
+                        everyday life easier, more productive, and more connected.
+                        Every app we ship is designed with the user first.
                     </p>
                 </div>
                 <div class="about-card">
                     <span class="icon">📱</span>
-                    <h3>Available On</h3>
+                    <h3>What We Do</h3>
                     <p>
-                        Available on Android devices through Google Play Store. 
-                        Download now and start your language learning journey 
-                        with Wedawon.
+                        We design, develop, and publish mobile applications
+                        across multiple categories — language learning,
+                        social networking, productivity, and more.
                     </p>
                 </div>
+                <div class="about-card">
+                    <span class="icon">⚙️</span>
+                    <h3>Our Approach</h3>
+                    <p>
+                        We use modern technologies like Flutter and Firebase to
+                        build fast, reliable apps that work seamlessly across
+                        Android, iOS, and Web.
+                    </p>
+                </div>
+                <div class="about-card">
+                    <span class="icon">🌏</span>
+                    <h3>Our Reach</h3>
+                    <p>
+                        Based in Myanmar, we build for the world. Our apps are
+                        available on Google Play Store and the Apple App Store,
+                        designed for global users.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+    APPS SECTION
+    ============================================ -->
+    <section id="apps" style="padding-top: 0;">
+        <div class="container">
+            <h2 class="section-title">Our <span>Apps</span></h2>
+            <p class="section-subtitle">
+                Explore the applications we've built and published.
+            </p>
+            <div class="apps-grid">
+
+                <!-- PartnerUp App -->
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-handshake"></i>
+                    </div>
+                    <h3>PartnerUp</h3>
+                    <div class="app-tagline">Find your perfect partner</div>
+                    <p>
+                        A real-time social app for finding partners for anything —
+                        sports, study, work, or hobbies. Chat, form binding
+                        partnerships, and stay accountable with our Cheater Board
+                        and Leaderboard systems.
+                    </p>
+                    <div class="app-meta">
+                        <span>Social</span>
+                        <span>Chat</span>
+                        <span>Partnerships</span>
+                    </div>
+                </div>
+
+                <!-- Wedawon Learning App -->
+                <div class="app-card">
+                    <div class="app-icon">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <h3>Wedawon Language Learning</h3>
+                    <div class="app-tagline">Let's learn for our future</div>
+                    <p>
+                        A comprehensive language learning app for mastering
+                        vocabulary, grammar, and exam preparation for IELTS, HSK,
+                        JLPT, and TOPIK with audio pronunciation and structured
+                        lessons.
+                    </p>
+                    <div class="app-meta">
+                        <span>Education</span>
+                        <span>Language</span>
+                        <span>Exam Prep</span>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
@@ -845,38 +978,38 @@
     ============================================ -->
     <section style="padding-top: 0;">
         <div class="container">
-            <h2 class="section-title">Key <span>Features</span></h2>
-            <p class="section-subtitle">Everything you need to master a new language</p>
+            <h2 class="section-title">What We <span>Value</span></h2>
+            <p class="section-subtitle">Principles we follow in every app we build</p>
             <div class="features-grid">
                 <div class="feature-item">
-                    <span class="icon">📝</span>
-                    <h4>Grammar Lessons</h4>
-                    <p>Structured grammar rules with examples and explanations</p>
+                    <span class="icon">🔒</span>
+                    <h4>Privacy First</h4>
+                    <p>We collect only what's necessary and never sell your data</p>
                 </div>
                 <div class="feature-item">
-                    <span class="icon">📖</span>
-                    <h4>Vocabulary Builder</h4>
-                    <p>Comprehensive vocabulary lists with pronunciation</p>
+                    <span class="icon">⚡</span>
+                    <h4>Fast & Reliable</h4>
+                    <p>Real-time performance with modern cloud infrastructure</p>
                 </div>
                 <div class="feature-item">
-                    <span class="icon">📋</span>
-                    <h4>Exam Preparation</h4>
-                    <p>Practice questions for IELTS, HSK, JLPT, and TOPIK</p>
+                    <span class="icon">🎨</span>
+                    <h4>Clean Design</h4>
+                    <p>Simple, intuitive interfaces that users understand instantly</p>
                 </div>
                 <div class="feature-item">
-                    <span class="icon">🔊</span>
-                    <h4>Audio Pronunciation</h4>
-                    <p>Native-like pronunciation for all words and phrases</p>
+                    <span class="icon">🌐</span>
+                    <h4>Cross-Platform</h4>
+                    <p>Available on Android, iOS, and Web with consistent UX</p>
                 </div>
                 <div class="feature-item">
-                    <span class="icon">🔍</span>
-                    <h4>Smart Search</h4>
-                    <p>Quickly find vocabulary and grammar topics</p>
+                    <span class="icon">🛡️</span>
+                    <h4>Secure</h4>
+                    <p>Encrypted data, secure authentication, and safe storage</p>
                 </div>
                 <div class="feature-item">
-                    <span class="icon">📊</span>
-                    <h4>Progress Tracking</h4>
-                    <p>Track your learning journey and achievements</p>
+                    <span class="icon">💬</span>
+                    <h4>User-Focused</h4>
+                    <p>Every feature is shaped by real user feedback</p>
                 </div>
             </div>
         </div>
@@ -889,20 +1022,23 @@
         <div class="container">
             <h2 class="section-title">Privacy <span>Policy</span></h2>
             <p class="section-subtitle">
-                Last updated: August 13, 2026
+                Last updated: September 11, 2026
             </p>
             <div class="privacy-content">
                 <h2>Introduction</h2>
                 <p>
-                    Wedawon ("we", "our", or "us") respects your privacy. This Privacy Policy 
-                    explains how we collect, use, and protect your personal information when 
-                    you use our mobile application ("the App").
+                    Wedawon ("we", "our", or "us") develops and publishes mobile
+                    applications. This Privacy Policy explains how we collect, use,
+                    and protect your personal information across all our apps
+                    (including PartnerUp and Wedawon Language Learning, referred to
+                    as "the Apps").
                 </p>
 
                 <div class="highlight">
                     <p>
-                        <strong>🔒 Summary:</strong> We collect minimal data to provide and 
-                        improve the App. We do not sell your data to third parties.
+                        <strong>🔒 Summary:</strong> We collect minimal data to
+                        provide our services. We do not sell your data to third
+                        parties. You can delete your account at any time.
                     </p>
                 </div>
 
@@ -910,79 +1046,86 @@
                 <p><strong>We collect the following types of information:</strong></p>
                 <ul>
                     <li>
-                        <strong>Account Information:</strong> When you create an account, 
-                        we collect your email address and authentication credentials 
-                        (handled securely by Firebase Authentication).
+                        <strong>Account Information:</strong> When you create an
+                        account, we collect your email address and authentication
+                        credentials (handled securely by Firebase Authentication).
                     </li>
                     <li>
-                        <strong>Usage Data:</strong> We collect information about how you 
-                        interact with the App, including which lessons you complete, 
-                        quiz scores, and study progress.
+                        <strong>Content:</strong> Information you create inside the
+                        Apps — posts, messages, comments, profile bio, and any
+                        other content you submit.
                     </li>
                     <li>
-                        <strong>Device Information:</strong> We collect basic device 
-                        information such as device model, operating system version, and 
-                        unique device identifiers for analytics purposes.
+                        <strong>Usage Data:</strong> How you interact with the
+                        Apps, including which features you use, session duration,
+                        and progress within the Apps.
                     </li>
                     <li>
-                        <strong>Crash Reports:</strong> We collect crash logs and error 
-                        reports to help us identify and fix issues in the App.
+                        <strong>Device Information:</strong> Basic device details
+                        like device model, OS version, and unique identifiers, used
+                        for analytics and crash reporting.
+                    </li>
+                    <li>
+                        <strong>Crash Reports:</strong> Crash logs and error reports
+                        to help us identify and fix issues.
                     </li>
                 </ul>
 
                 <h2>How We Use Your Information</h2>
                 <ul>
                     <li>
-                        <strong>Provide the Service:</strong> To deliver language learning 
-                        content, track progress, and personalize your learning experience.
+                        <strong>Provide the Service:</strong> To deliver app
+                        features, track progress, and personalize your experience.
                     </li>
                     <li>
-                        <strong>Improve the App:</strong> To analyze usage patterns and 
-                        improve the App's performance, content, and user experience.
+                        <strong>Improve Our Apps:</strong> To analyze usage patterns
+                        and improve performance, features, and user experience.
                     </li>
                     <li>
-                        <strong>Communicate:</strong> To send you important updates, 
-                        notifications, and responses to your inquiries.
+                        <strong>Communicate:</strong> To send important updates,
+                        notifications, and respond to your inquiries.
                     </li>
                     <li>
-                        <strong>Security:</strong> To protect the App and our users from 
-                        fraud, abuse, and unauthorized access.
+                        <strong>Security:</strong> To protect our Apps and users
+                        from fraud, abuse, and unauthorized access.
                     </li>
                 </ul>
 
                 <h2>Third-Party Services</h2>
                 <p>
-                    We use the following third-party services that may collect and process 
-                    your data:
+                    We use the following third-party services that may collect and
+                    process your data:
                 </p>
                 <ul>
                     <li>
-                        <strong>Firebase (Google):</strong> Used for authentication, 
-                        cloud storage, analytics, and crash reporting. 
+                        <strong>Firebase (Google):</strong> Used for authentication,
+                        cloud storage, analytics, and crash reporting.
                         <a href="https://firebase.google.com/support/privacy" target="_blank">
                             Firebase Privacy Policy
                         </a>
                     </li>
                     <li>
-                        <strong>Google Play Services:</strong> Used for app distribution 
-                        and in-app updates.
+                        <strong>Google Play Services:</strong> Used for app
+                        distribution and in-app updates.
                     </li>
                 </ul>
 
                 <h2>Data Storage and Security</h2>
                 <p>
-                    Your data is stored securely on Firebase's cloud infrastructure. 
-                    We implement industry-standard security measures to protect your 
-                    personal information from unauthorized access, alteration, or deletion.
+                    Your data is stored securely on Firebase's cloud infrastructure.
+                    We implement industry-standard security measures to protect your
+                    personal information from unauthorized access, alteration, or
+                    deletion.
                 </p>
                 <ul>
                     <li>
-                        <strong>Encryption:</strong> Data is encrypted in transit and 
-                        at rest using industry-standard encryption protocols.
+                        <strong>Encryption:</strong> Data is encrypted in transit
+                        and at rest using industry-standard protocols.
                     </li>
                     <li>
-                        <strong>Access Control:</strong> Only authorized personnel have 
-                        access to user data, and only for legitimate business purposes.
+                        <strong>Access Control:</strong> Only authorized personnel
+                        have access to user data, and only for legitimate business
+                        purposes.
                     </li>
                 </ul>
 
@@ -990,45 +1133,49 @@
                 <p>You have the following rights regarding your personal data:</p>
                 <ul>
                     <li>
-                        <strong>Access:</strong> You can request a copy of the data we hold 
-                        about you.
+                        <strong>Access:</strong> You can request a copy of the data
+                        we hold about you.
                     </li>
                     <li>
-                        <strong>Correction:</strong> You can update or correct your 
+                        <strong>Correction:</strong> You can update or correct your
                         personal information through the App settings.
                     </li>
                     <li>
-                        <strong>Deletion:</strong> You can request deletion of your 
-                        account and associated data by contacting us.
+                        <strong>Deletion:</strong> You can delete your account
+                        directly inside the App (Settings → Delete My Account).
+                        Alternatively, contact us at the email below.
                     </li>
                     <li>
-                        <strong>Opt-Out:</strong> You can opt out of analytics data 
-                        collection through your device settings.
+                        <strong>Opt-Out:</strong> You can opt out of non-essential
+                        data collection through your device settings.
                     </li>
                 </ul>
 
                 <h2>Children's Privacy</h2>
                 <p>
-                    The App is not intended for children under 13 years of age. We do not 
-                    knowingly collect personal information from children under 13. If you 
-                    believe we have collected such information, please contact us.
+                    Our Apps are not intended for children under 13 years of age.
+                    We do not knowingly collect personal information from children
+                    under 13. If you believe we have collected such information,
+                    please contact us immediately.
                 </p>
 
                 <h2>Changes to This Policy</h2>
                 <p>
-                    We may update this Privacy Policy from time to time. We will notify you 
-                    of any material changes by posting the new policy in the App and 
-                    updating the "Last updated" date above.
+                    We may update this Privacy Policy from time to time. We will
+                    notify you of any material changes by posting the new policy
+                    on this page and updating the "Last updated" date above.
                 </p>
 
                 <h2>Contact Us</h2>
                 <p>
-                    If you have any questions, concerns, or requests regarding this 
+                    If you have any questions, concerns, or requests regarding this
                     Privacy Policy, please contact us:
                 </p>
                 <ul>
                     <li><strong>Email:</strong> nextgenlearningmyanmar@gmail.com</li>
-                    <li><strong>Organization:</strong> Wedawon</li>
+                    <li><strong>Company:</strong> Wedawon</li>
+                    <li><strong>Location:</strong> Yangon, Myanmar</li>
+                    <li><strong>Website:</strong> wedawon.com</li>
                 </ul>
             </div>
         </div>
@@ -1068,7 +1215,7 @@
                             <i class="fas fa-building"></i>
                         </div>
                         <div class="info">
-                            <div class="label">Organization</div>
+                            <div class="label">Company</div>
                             <div class="value">Wedawon</div>
                         </div>
                     </div>
@@ -1118,7 +1265,7 @@
             </div>
             <p>
                 &copy; 2026 <strong>Wedawon</strong>. All rights reserved.
-                Built with ❤️ for language learners.
+                Building apps for the future.
             </p>
         </div>
     </footer>
@@ -1132,9 +1279,7 @@
     JAVASCRIPT
     ============================================ -->
     <script>
-        // ============================================
         // MOBILE MENU TOGGLE
-        // ============================================
         const menuToggle = document.getElementById('menuToggle');
         const navLinks = document.getElementById('navLinks');
 
@@ -1143,7 +1288,6 @@
             navLinks.classList.toggle('open');
         });
 
-        // Close menu on link click (mobile)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 menuToggle.classList.remove('active');
@@ -1151,9 +1295,7 @@
             });
         });
 
-        // ============================================
         // ACTIVE NAV LINK ON SCROLL
-        // ============================================
         const sections = document.querySelectorAll('section[id]');
         const navLinksAll = document.querySelectorAll('.nav-links a');
 
@@ -1174,9 +1316,7 @@
             });
         });
 
-        // ============================================
-        // CONTACT FORM HANDLING
-        // ============================================
+        // CONTACT FORM
         const contactForm = document.getElementById('contactForm');
         const toast = document.getElementById('toast');
 
@@ -1202,30 +1342,22 @@
                 return;
             }
 
-            // Simple email validation
             const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
             if (!emailRegex.test(email)) {
                 showToast('Please enter a valid email address.', 'error');
                 return;
             }
 
-            // Build mailto link
             const mailtoLink =
-                `mailto:nextgenlearningmyanmar@wedawon.com?subject=Wedawon App: ${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A%0A${encodeURIComponent(message)}`;
+                `mailto:nextgenlearningmyanmar@gmail.com?subject=Wedawon: ${encodeURIComponent(subject)}&body=Name: ${encodeURIComponent(name)}%0AEmail: ${encodeURIComponent(email)}%0A%0A${encodeURIComponent(message)}`;
 
-            // Open email client
             window.location.href = mailtoLink;
 
-            // Show success message
             showToast('✅ Thank you! Your message has been sent.', 'success');
-
-            // Reset form
             contactForm.reset();
         });
 
-        // ============================================
-        // SMOOTH SCROLL FOR NAV LINKS
-        // ============================================
+        // SMOOTH SCROLL
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function(e) {
                 const target = document.querySelector(this.getAttribute('href'));
@@ -1239,9 +1371,7 @@
             });
         });
 
-        // ============================================
-        // KEYBOARD ACCESSIBILITY
-        // ============================================
+        // ESC key closes mobile menu
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navLinks.classList.contains('open')) {
                 menuToggle.classList.remove('active');
